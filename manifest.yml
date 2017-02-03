@@ -1,7 +1,5 @@
 ---
 applications:
-- services:
-  - myMicroservicesSQL
 name: MicroservicesUI
 memory: 256M
 instances: 1
