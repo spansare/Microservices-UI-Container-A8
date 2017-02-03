@@ -1,5 +1,7 @@
 <?php
 
+require_once("service-discovery.php");
+
 // Get our Catalog API endpoint from Service Discovery
 //$catalogRoute = getAPIRoute("Catalog-API");
 //$catalogRoute = "http://ms-catalogAPI-domical-directive.mybluemix.net";
