@@ -7,7 +7,7 @@ require_once("service-discovery.php");
 //$catalogRoute = "http://ms-catalogAPI-domical-directive.mybluemix.net";
 
 $application = getenv("VCAP_APPLICATION");
-echo "\r\napplication:" . $application;
+//echo "\r\napplication:" . $application;
 $application_json = json_decode($application, true);
 $applicationURI = $application_json["application_uris"][0];
 //echo "\r\napplicationURI:" . $applicationURI;
@@ -16,7 +16,7 @@ if (substr( $applicationURI, 0, 3 ) === "ui-") {
 } else {
     $catalogHost = str_replace("-ui-", "-catalog-api-", $applicationURI);
 }
-echo "\r\ncatalogHost:" . $catalogHost;    
+//echo "\r\ncatalogHost:" . $catalogHost;    
 $catalogRoute = "http://" . $catalogHost;
 
 // Get the products from our Catalog API
