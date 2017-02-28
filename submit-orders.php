@@ -16,7 +16,7 @@ $data = file_get_contents('php://input');
 #$ordersHost = substr_replace($applicationURI, $ordersAppName, 0, strlen($applicationName));
 #$ordersRoute = "http://" . $ordersHost;
 #$ordersURL = $ordersRoute . "/rest/orders";
-$ordersURL = "http://localhost:6379/orders/JavaOrdersAPI/rest/orders"
+$ordersURL = "http://onlinestore-demo.mybluemix.net/orders/JavaOrdersAPI/rest/orders"
 //$ordersURL = $ordersRoute . "/rest/orders";
 //$ordersURL = "http://ms-ordersAPI-hyperfunctional-throstle.mybluemix.net/rest/orders";
 
