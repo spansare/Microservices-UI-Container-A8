@@ -16,9 +16,11 @@ $data = file_get_contents('php://input');
 #$ordersHost = substr_replace($applicationURI, $ordersAppName, 0, strlen($applicationName));
 #$ordersRoute = "http://" . $ordersHost;
 #$ordersURL = $ordersRoute . "/rest/orders";
-$ordersURL = "http://onlinestore-demo.mybluemix.net/orders/JavaOrdersAPI/rest/orders"
+
 //$ordersURL = $ordersRoute . "/rest/orders";
 //$ordersURL = "http://ms-ordersAPI-hyperfunctional-throstle.mybluemix.net/rest/orders";
+$ordersURL = "http://localhost:6379/orders/JavaOrdersAPI/rest/orders";
+error_log($ordersURL);
 
 function httpPost($data,$url){
 	$ch = curl_init();
@@ -28,6 +30,7 @@ function httpPost($data,$url){
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
 	$output = curl_exec ($ch);
+	error_log($output);
 	$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	curl_close ($ch);
 	return $code;
