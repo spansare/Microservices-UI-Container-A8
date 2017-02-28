@@ -18,7 +18,7 @@ require_once("service-discovery.php");
 #}
 //echo "\r\ncatalogHost:" . $catalogHost;    
 #$catalogRoute = "http://" . $catalogHost;
-$catalogRoute = "http://localhost:6379/catalog-service";
+$catalogRoute = "http://onlinestore-demo.mybluemix.net/catalog-service";
 // Get the products from our Catalog API
 $result = request("GET", $catalogRoute . "/items/");
 ?>
